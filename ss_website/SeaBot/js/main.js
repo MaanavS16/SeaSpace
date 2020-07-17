@@ -15,3 +15,15 @@ let inty = setInterval(scroll,1500);
 setTimeout(() => { clearInterval(inty);}, 16500);
 
 
+const navbar = $("#1nav");
+const txt = $("#brandgone");
+
+window.onscroll = function(){
+    // console.log("test");
+    // if(window.scrollY >= 5000){
+    //     alert("test");
+    //     $("body").css("background-color","#e1e3a4!important")
+    //
+    // }
+    console.log(window.scrollY);
+}
