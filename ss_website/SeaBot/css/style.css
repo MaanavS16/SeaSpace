@@ -3,20 +3,26 @@ html{
 }
 
 body{
-    background-color: #2d2f35!important;
+    background-color: #57c7e6!important;
 }
 p{
     color:white;
 }
-.h1,h2,h3{
+h1,.h1,h2,h3{
     color:white!important;
+}
+h2{
+    font-size: 5rem!important;
+}
+.h1{
+    font-size: 9rem!important;
 }
 #change{
     color:white;
     font-weight:500;
     line-height:1.2;
-    font-size:2.5rem;
+    font-size:10rem;
 }
-.bg-primary{
+.navbg{
     background-color:#1a3d6b!important;
 }

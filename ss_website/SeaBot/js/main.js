@@ -6,12 +6,12 @@ async function scroll(){
     //     console.log("test");
     // }
     counter++;
-    let words = [" Scary "," Diverse "," HUGE "]
+    let words = [" Scary "," Diverse "," HUGE ", " Salty ", " Chilly ", " Wet ", " Tranquil "," Blue "," Bright "," Dark "," Deep "]
     document.getElementById("change").innerHTML = words[counter];
     // $("#change").slideUp("slow");
 }
 
-let inty = setInterval(scroll,2000);
-setTimeout(() => { clearInterval(inty);}, 6000);
+let inty = setInterval(scroll,1500);
+setTimeout(() => { clearInterval(inty);}, 16500);
 
 
