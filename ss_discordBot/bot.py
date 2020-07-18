@@ -56,7 +56,10 @@ async def on_message(message):
                         oceanCoords = geolocator.findClosestOcean(*res)
                         oceanName = geolocator.getLocFromCoord(*oceanCoords)
                         await message.channel.send("```The closest body of water I found is at longitude:{long} latitude:{lat}\
-                        \nIt's also called {name} ```".format(long=oceanCoords[0], lat=oceanCoords[1], name=oceanName))
+                        \nIt's close to {name} ```".format(long=oceanCoords[0], lat=oceanCoords[1], name=oceanName))
+
+                        mapsLink = 'https://www.google.com/maps/dir/?api=1&destination={lat},{long}&dir_action=navigate'.format(lat=oceanCoords[1], long=oceanCoords[0])
+                        await message.channel.send('Navigation Link: ' + mapsLink)
                     else:
                         await message.channel.send("```Awesome! You're ahead of the game and already at the ocean\
                         \nTry out #Sea Stats {24 hour time} {location} to learn more about where you are now.```")
