@@ -66,3 +66,6 @@ h2{
 .lead{
     font-size: 2rem!important;
 }
+.navbar-collapse{
+    float: right!important;
+}
