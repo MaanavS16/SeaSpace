@@ -18,12 +18,24 @@ setTimeout(() => { clearInterval(inty);}, 16500);
 const navbar = $("#1nav");
 const txt = $("#brandgone");
 
-window.onscroll = function(){
-    // console.log("test");
-    // if(window.scrollY >= 5000){
-    //     alert("test");
-    //     $("body").css("background-color","#e1e3a4!important")
-    //
-    // }
-    console.log(window.scrollY);
-}
+
+$(function () {
+    $(document).scroll(function () {
+        var $nav = $(".navbar-fixed-top");
+        var bln = $(this).scrollTop() >= $nav.height();
+        console.log(bln);
+        if(bln){
+            $(".navbar-fixed-top").addClass("sticky-top");
+            $("#navbarNav").hide();
+            $("#brandgone").hide();
+            $("#navbar-nav").hide();
+        }
+        else{
+            $(".navbar-fixed-top").removeClass("sticky-top");
+            $("#navbarNav").show();
+            $("#brandgone").show();
+            $("#navbar-nav").show();
+        }
+    });
+});
+// $(this).scrollTop() > $nav.height()

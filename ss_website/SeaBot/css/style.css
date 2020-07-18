@@ -30,7 +30,7 @@ h2{
     background-color:#1a3d6b!important;
 }
 .navbar{
-
+    position: sticky;
 }
 #meet{
     font-size: 5rem;
@@ -40,7 +40,29 @@ h2{
     font-size: 2rem;
     color: black;
     width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
 }
-/*#brandgone{*/
-/*    font-size: 1.5rem;*/
-/*}*/
+.navbar-fixed-top.scrolled {
+    position: sticky;
+    background-color: white !important;
+    transition: background-color 200ms linear;
+}
+.sticky-top{
+    background-color: transparent!important;
+}
+.jumbotron{
+    position: relative;
+    left: 10%;
+    background-color: #f58f7f!important;
+    width: 80%;
+    border-radius: 40px!important;
+}
+.my-4{
+    border-top: 2px solid;
+    color: #b35647;
+}
+.lead{
+    font-size: 2rem!important;
+}
