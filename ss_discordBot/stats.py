@@ -3,10 +3,10 @@ import meteomatics.api as api
 import json
 import requests
 
-class Stats():
-    def __init__(self):
-        self.username = "panthercreekhigh_pantha"
-        self.password = "lMbEDC2R6jc7o"
+class Stats:
+    def __init__(self, username, password):
+        self.username = username
+        self.password = password
 
     def get_temp(self, x, y):
         try:

@@ -3,12 +3,17 @@ import discord
 import os
 import random
 from geolocation import Geolocate
+from stats import Stats
 
 load_dotenv('secrets.env')
 discordToken = os.getenv('DISCORD_TOKEN')
 geocodeToken = os.getenv('GEOCODE_TOKEN')
+statPassword = os.getenv('METEOMATICS_PASSWORD')
+statUsername = os.getenv('METEOMATICS_USERNAME')
 
 geolocator = Geolocate(geocodeToken = geocodeToken)
+statloader = Stats(username=statUsername, password=statPassword)
+
 client = discord.Client()
 commandKey = '#sea'
 
