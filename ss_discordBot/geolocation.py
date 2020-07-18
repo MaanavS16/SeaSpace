@@ -82,7 +82,11 @@ class Geolocate:
             return (x,y)
 
 '''
-testObj = Geolocate('0df011b3334448e8ae04f411333105e2')
+from dotenv import load_dotenv
+load_dotenv('secrets.env')
+geocodeToken = os.getenv('GEOCODE_TOKEN')
+
+testObj = Geolocate(geocodeToken)
 testCoordinate = (86.9250, 27.9881)
 
 print('On land?: ' + str(testObj.isLand(*testCoordinate)))
