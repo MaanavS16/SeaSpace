@@ -21,7 +21,7 @@ def ijToxy(i,j):
 
 class Geolocate:
     def __init__(self, geocodeToken, blackThreshold=1):
-        # save API key as instance variable
+        # create geocode instance
         self.geocoder = OpenCageGeocode(str(geocodeToken))
 
         # load map as np array
