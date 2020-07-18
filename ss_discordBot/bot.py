@@ -76,6 +76,14 @@ async def on_message(message):
 
         elif 'scene' in message.content.lower():
             pass
+        elif 'size' in message.content.lower():
+            print(message.content.lower())
+            try:
+                content = message.content.lower()[(message.content.index("size ") + 5):].split()
+                print(content)
+            except:
+                responseEmote = '😥'
+                await message.channel.send('`Please use the format: #Sea Size {quanity} {original unit} to {new unit}`')
         else:
             responseEmote = '😥'
             await message.channel.send('```Command was not recognized. \
