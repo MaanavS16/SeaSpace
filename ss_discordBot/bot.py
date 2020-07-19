@@ -32,10 +32,6 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    # development command
-    if 'end' in message.content.lower():
-        await message.channel.send("Ok I will")
-        exit()
 
     # check images for aquatic animals
     if len(message.attachments) > 0:
@@ -52,12 +48,7 @@ async def on_message(message):
         responseEmote = '\N{THUMBS UP SIGN}'
 
 
-        if 'soothe' in message.content.lower():
-            await message.channel.send("soothing")
-            responseEmote = '\N{SLIGHTLY SMILING FACE}'
-
-
-        elif 'spot' in message.content.lower() and message.content.lower():
+        if 'spot' in message.content.lower() and message.content.lower():
             print(message.content.lower())
             try:
                 searchLoc = message.content.lower()[(message.content.index("spot ") + 5):]
@@ -90,8 +81,7 @@ async def on_message(message):
                 responseEmote = '😥'
                 await message.channel.send('`Please use the format: #Sea Spot {Location}`')
 
-        elif 'scene' in message.content.lower():
-            pass
+
         elif 'size' in message.content.lower():
             print(message.content.lower())
             try:
@@ -127,6 +117,14 @@ async def on_message(message):
             except:
                 responseEmote = '😥'
                 await message.channel.send('`Please use the format: #Sea Stats {metric} {x} {y} `')
+        elif 'help' in message.content.lower():
+            await message.channel.send(
+            "Commands: \n"
+            "#sea spot {location}  : Finds directions to an ocean. Redirects to nearest ocean if location is land\n"
+            "#sea size {metric} {unit} : Displays attributes of the ocean like volume, area, and mass in various units \n"
+            "#sea stats {metric} {longitude} {latitude} :  \n"
+            )
+
         else:
             responseEmote = '😥'
             await message.channel.send('```Command was not recognized. \
