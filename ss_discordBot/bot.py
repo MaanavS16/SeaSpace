@@ -8,7 +8,7 @@ from convert import Converter
 from animal import Predictor
 
 
-load_dotenv('secrets.env')
+load_dotenv('.env')
 discordToken = os.getenv('DISCORD_TOKEN')
 geocodeToken = os.getenv('GEOCODE_TOKEN')
 statPassword = os.getenv('METEOMATICS_PASSWORD')
@@ -123,7 +123,7 @@ async def on_message(message):
                     print("getting pic")
                     statloader.get_temp_pic(x, y)
                     print("got pic")
-                    await message.channel.send(file = discord.File('temp.png'))
+                    await message.channel.send(file = discord.File('temp_pic.png'))
             except:
                 responseEmote = '😥'
                 await message.channel.send('`Please use the format: #Sea Stats {metric} {x} {y} `')
@@ -136,5 +136,4 @@ async def on_message(message):
         await message.add_reaction(responseEmote)
 
     #await message.channel.send("Message")
-
 client.run(discordToken)
