@@ -8,7 +8,7 @@ from convert import Converter
 from animal import Predictor
 
 
-load_dotenv('.env')
+load_dotenv('secrets.env')
 discordToken = os.getenv('DISCORD_TOKEN')
 geocodeToken = os.getenv('GEOCODE_TOKEN')
 statPassword = os.getenv('METEOMATICS_PASSWORD')
