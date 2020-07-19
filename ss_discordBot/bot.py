@@ -120,9 +120,9 @@ async def on_message(message):
         elif 'help' in message.content.lower():
             await message.channel.send(
             "Commands: \n"
-            "#sea spot {location}  : Plays Aarush's Playlist. Can only be utilized by everyone \n"
-            "#sea size  : Enables custom messages. Can only be utilized by Powerplant \n"
-            "#sea stats  : Disables custom messages. Can only be utilized by Powerplant \n"
+            "#sea spot {location}  : Finds directions to an ocean. Redirects to nearest ocean if location is land\n"
+            "#sea size {metric} {unit} : Displays attributes of the ocean like volume, area, and mass in various units \n"
+            "#sea stats {metric} {longitude} {latitude} :  \n"
             )
 
         else:
