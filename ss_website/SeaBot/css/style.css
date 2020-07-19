@@ -25,7 +25,7 @@ h2{
     font-size: 9rem!important;
 }
 #change{
-    color:white;
+    color:#1a3d6b;
     font-weight:500;
     line-height:1.2;
     font-size:10rem;
@@ -144,10 +144,13 @@ h2{
 }
 #brown{
     background-color:#8c6949;
+    /*height: 900px;*/
+    overflow: hidden;
+    /*height: 930px;*/
 }
 #Creators{
     background: #8c6949;
-    color: #8c6949;
+    color: #fff;
     padding-top: 100px;
     padding-left: 100%;
     padding-right: 100%;
@@ -173,19 +176,26 @@ h2{
     transform: translateY(-1300%);
     position: relative;
     left: 17%;
+    /*top: inherit!important;*/
 }
 .mohitFavi{
     transform: translateY(-1300%);
     position: relative;
     left: 31%;
+    /*top: inherit;*/
+
 }
 .maanavFavi{
     transform: translateY(-1300%);
     position: relative;
     left: 46%;
+    /*bottom: 50%;*/
+
 }
 .pranishFavi{
     transform: translateY(-1300%);
     position: relative;
     left: 61%;
+    /*top: inherit;*/
+
 }

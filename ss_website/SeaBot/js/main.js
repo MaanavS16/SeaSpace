@@ -5,7 +5,7 @@ async function scroll(){
     //     $("#change").val(phrase);
     //     console.log("test");
     // }
-    let words = [" scary "," diverse "," HUGE ", " salty ", " chilly ", " wet ", " tranquil "," blue "," bright "," dark "," deep "]
+    let words = [" scary "," diverse "," huge ", " salty ", " chilly ", " wet "," blue "," bright "," dark "," deep ", " unknown "]
     counter++;
     if(words[counter] != undefined){
     document.getElementById("change").innerHTML = words[counter];}
@@ -33,6 +33,7 @@ $(function () {
             $("#navbarNav").hide();
             $("#brandgone").hide();
             $(".navbar-nav").hide();
+            // $(".navbar-toggler").css("display","inline!important");
             // $(".navbar-toggler").show();
             // $(".navbar-toggler").click(function(){
             //     $(".navbar-nav").show();
