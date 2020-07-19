@@ -1,0 +1,9 @@
+discord
+python-dotenv
+numpy
+matplotlib
+tensorflow
+Pillow
+opencage
+pandas
+meteomatics

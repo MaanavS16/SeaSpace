@@ -4,6 +4,9 @@ import os
 import random
 from geolocation import Geolocate
 from stats import Stats
+from convert import Converter
+from animal import Predictor
+
 
 load_dotenv('secrets.env')
 discordToken = os.getenv('DISCORD_TOKEN')
@@ -11,9 +14,10 @@ geocodeToken = os.getenv('GEOCODE_TOKEN')
 statPassword = os.getenv('METEOMATICS_PASSWORD')
 statUsername = os.getenv('METEOMATICS_USERNAME')
 
+animalPredictor = Predictor()
 geolocator = Geolocate(geocodeToken = geocodeToken)
 statloader = Stats(username=statUsername, password=statPassword)
-
+converter = Converter()
 client = discord.Client()
 commandKey = '#sea'
 
@@ -33,6 +37,16 @@ async def on_message(message):
         await message.channel.send("Ok I will")
         exit()
 
+    # check images for aquatic animals
+    if len(message.attachments) > 0:
+        imgURL = message.attachments[0].url
+        print(imgURL)
+        preds = animalPredictor.predictPic(imgURL)
+        await message.channel.send('`Hey that looks like a {pred}!`'.\
+        format(pred = preds.replace('_', ' ')))
+        message.add_reaction('\N{THUMBS UP SIGN}')
+
+
     #detect commands
     if commandKey == message.content[0:len(commandKey)].lower():
         responseEmote = '\N{THUMBS UP SIGN}'
@@ -41,6 +55,8 @@ async def on_message(message):
         if 'soothe' in message.content.lower():
             await message.channel.send("soothing")
             responseEmote = '\N{SLIGHTLY SMILING FACE}'
+
+
         elif 'spot' in message.content.lower() and message.content.lower():
             print(message.content.lower())
             try:
@@ -80,10 +96,37 @@ async def on_message(message):
             print(message.content.lower())
             try:
                 content = message.content.lower()[(message.content.index("size ") + 5):].split()
+                converted = converter.convert(content[0], content[1])
+                await message.channel.send('` The ocean is {:,} {unit}s `'.format(converted, unit=content[1]))
                 print(content)
             except:
                 responseEmote = '😥'
-                await message.channel.send('`Please use the format: #Sea Size {quanity} {original unit} to {new unit}`')
+                await message.channel.send('`Please use the format: #Sea Size {metric} {unit}`')
+        elif 'stats' in message.content.lower():
+            print(message.content.lower())
+            try:
+                content = message.content.lower()[(message.content.index("stats ") + 6):].split()
+                # x, y = geolocator.getCoordFromLoc(" ".join(content[1:]))
+                x, y = content[1], content[2]
+
+                if content[0] == "temp":
+                    metric = statloader.get_temp(x, y)
+                    print("Metric is", metric)
+                    await message.channel.send('`The ocean temperature is {metric} degrees Celsius at this location: coordinates {y} degrees latitude, {x} degrees longitude`'.format(metric = metric, x = x, y = y))
+                elif content[0] == "salinity":
+                    metric = statloader.get_salinity(x, y)
+                    await message.channel.send('`The ocean salinity is {metric} psu at this location: coordinates {y} degrees latitude, {x} degrees longitude`'.format(metric = metric, x = x, y = y))
+                elif content[0] == "depth":
+                    metric = statloader.get_depth(x, y)
+                    await message.channel.send('`The ocean depth is {metric} km at this location: coordinates {y} degrees latitude, {x} degrees longitude`'.format(metric = metric, x = x, y = y))
+                elif content[0] == "temp_pic":
+                    print("getting pic")
+                    statloader.get_temp_pic(x, y)
+                    print("got pic")
+                    await message.channel.send(file = discord.File('temp.png'))
+            except:
+                responseEmote = '😥'
+                await message.channel.send('`Please use the format: #Sea Stats {metric} {x} {y} `')
         else:
             responseEmote = '😥'
             await message.channel.send('```Command was not recognized. \

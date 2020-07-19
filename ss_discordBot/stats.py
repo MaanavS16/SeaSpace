@@ -35,20 +35,21 @@ class Stats:
 
         return res.json()['data'][0]['coordinates'][0]['dates'][0]['value']
     def get_temp_pic(self, x, y):
-        filename_png = 'temp_pic.png'
+        print("STARTED")
+        filename_png = 'satImages/temp_pic.png'
         startdate_png = dt.datetime.utcnow().replace(hour=0, minute=0, second=0, microsecond=0)
         parameter_png = 't_2m:C'
         lat_N = y + 15
         lon_W = x - 15
         lat_S = y - 15
         lon_E = x + 15
-        res_lat = 0.01
-        res_lon = 0.01
+        res_lat = 0.05
+        res_lon = 0.05
         print("grid as a png:")
         try:
             api.query_grid_png(filename_png, startdate_png, parameter_png, lat_N, lon_W, lat_S, lon_E, res_lat, res_lon,
                                self.username, self.password)
             print("filename = {}".format(filename_png))
+            print('done')
         except Exception as e:
             print("Failed, the exception is {}".format(e))
-    
