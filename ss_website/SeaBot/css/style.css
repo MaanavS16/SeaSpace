@@ -1,12 +1,16 @@
 html{
     scroll-behavior: smooth;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 body{
     width: 100%;
     height: 100%;
-    background:linear-gradient(180deg,#57c7e6 10%,#EEEBEB 25%,#e1e3a4 30%)!important;
+    /*background:linear-gradient(180deg,#57c7e6 10%,#EEEBEB 25%,#e1e3a4 30%)!important;*/
+    /*background:linear-gradient(180deg,#57c7e6 10%,#EEEBEB 10%,#e1e3a4 10%,#1a3d6b 70%, #8c6949 99%)!important;*/
+    /*background: linear-gradient(180deg,#57c7e6,#EEEBEB,#e1e3a4,#1a3d6b,#8c6949 85%);*/
+    background:linear-gradient(180deg,#e1e3a4 10%,#EEEBEB 25%,#57c7e6 30%,#1a3d6b)!important
 }
 p{
     color:white;
@@ -37,7 +41,7 @@ h2{
     color: black;
 }
 #abtext{
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: black;
     width: 100%;
     padding-left: 100px;
@@ -51,6 +55,9 @@ h2{
 }
 .sticky-top{
     background-color: transparent!important;
+}
+#logoBig{
+ width: 100%;
 }
 .jumbotron{
     position: relative;
@@ -68,4 +75,117 @@ h2{
 }
 .navbar-collapse{
     float: right!important;
+}
+#rightVine{
+    float: right;
+    transform: scaleX(-1);
+}
+#centerVine{
+    position: absolute;
+    left: 35%;
+    transform: scaleX(-1);
+}
+#invBtn{
+    /*position: absolute;*/
+    /*transform: translateX(50%) translateY(200%);*/
+    font-size: 2.5rem!important;
+    width: 30%;
+    transform: translateY(-900%);
+    border-radius: .5rem;
+
+}
+.fish{
+    width: 10%;
+    height: 10%;
+}
+#fish1{
+    transform: translateY(250%) rotate(20deg);
+}
+#fish3{
+    transform: translateX(500%) translateY(100%) rotate(160deg);
+}/*change translate x amount based on display size*/
+#fish2{
+    transform: translateX(300%) translateY(-230%)rotate(45deg);
+}
+#bloo{
+    /*background-color: #1a3d6b;*/
+    width: 100%;
+}
+.creatorpic {
+    transform: rotate(270deg) translateX(-30%);
+    height: 20%;
+    width: 30%;
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    /*vertical-align: bottom!important;*/
+}
+#sachet{
+    transform:rotate(270deg) translateX(-30%); /*-30*/
+    position: relative;
+    left: 5%;
+    right:95%
+}
+#mohit{
+    transform:rotate(270deg) translateX(26.5%);
+    position: relative;
+    left: 25%;
+}
+#maanav{
+    transform:rotate(270deg) translateX(82.7%);
+    position: relative;
+    left: 45%;
+}
+#pranish{
+    transform:rotate(270deg) translateX(139%);
+    position: relative;
+    left: 65%;
+    right:35%;
+}
+#brown{
+    background-color:#8c6949;
+}
+#Creators{
+    background: #8c6949;
+    color: #8c6949;
+    padding-top: 100px;
+    padding-left: 100%;
+    padding-right: 100%;
+    background-clip: padding-box;
+}
+#Creators2{
+    transform: translateY(90%);
+    font-size: 100px;
+}
+#anchor{
+    height: 8%;
+    width: 8%;
+    transform: translateY(-15%);
+}
+#invText{
+    font-size: 100px;
+    color: white;
+    position: absolute;
+    left: 30%;
+    transform: translateY(-25%);
+}
+.sachetFavi{
+    transform: translateY(-1300%);
+    position: relative;
+    left: 17%;
+}
+.mohitFavi{
+    transform: translateY(-1300%);
+    position: relative;
+    left: 31%;
+}
+.maanavFavi{
+    transform: translateY(-1300%);
+    position: relative;
+    left: 46%;
+}
+.pranishFavi{
+    transform: translateY(-1300%);
+    position: relative;
+    left: 61%;
 }
