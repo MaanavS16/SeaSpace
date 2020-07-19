@@ -4,6 +4,10 @@ Sea Space is the first ever ocean-centric discord bot, aimed at education and en
 
 ![Sample of satellite image](ss_discordBot/temp_pic.png)
 
+![Sample of satellite image](ss_discordBot/sampleBot.jpg)
+
+![Sample of satellite image](ss_discordBot/geospatialAlgorithm.jpg)
+
 ## Inspiration
 Discord bots can make learning about any topic more fun and easy. This is why we decided to make a bot that is focused on educating the public about the ocean.
 
