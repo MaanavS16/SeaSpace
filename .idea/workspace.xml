@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a90a0b83-1d04-4f36-ba40-460726742247" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +39,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -32,26 +51,41 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595014108277</updated>
-      <workItem from="1595014113359" duration="23694000" />
+      <workItem from="1595014113359" duration="46335000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="-1106" y="402" key="#Notifications" timestamp="1595014195330">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-1106" y="402" key="#Notifications/0.0.1707.930/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1595014195330" />
-    <state x="-1151" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595021662250">
+    <state x="-1151" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595110138598">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="-1151" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.930/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1595021662250" />
+    <state x="-1151" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.930/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1595110138598" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1595033092476">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.0.1707.930/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1595033092476" />
+    <state x="-1304" y="250" key="run.anything.popup" timestamp="1595110664245">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-1304" y="250" key="run.anything.popup/0.0.1707.930/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1595110664245" />
     <state x="-1767" y="242" width="672" height="678" key="search.everywhere.popup" timestamp="1595032578220">
       <screen x="-1920" y="0" width="1920" height="1080" />
     </state>
